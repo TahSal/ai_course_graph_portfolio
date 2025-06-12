@@ -1,99 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Tahani Saleh | Generative AI Portfolio</title>
+  <!-- ... your existing <head> content ... -->
   <style>
-    /* Color palette inspired by kirstenoddy.com hormone‑balancing course */
-    :root {
-      --primary: #d9736d;   /* warm coral */
-      --accent: #8fb9a8;    /* soft sage green */
-      --bg: #fff9f6;        /* off‑white / blush */
-      --muted: #f7ece9;     /* very light peach */
-      --dark: #2f2f2f;      /* charcoal text */
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--dark); line-height: 1.6; }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-    header h1 { font-size: 2.5rem; margin-bottom: .5rem; letter-spacing: 1px; }
-    header p { font-size: 1.2rem; color: rgba(255,255,255,.9); }
-    nav {
-      position: sticky; top: 0; z-index: 1000;
-      background: var(--muted);
-      display: flex; justify-content: center; gap: 2rem;
-      padding: 0.8rem 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,.05);
-    }
-    nav a {
-      color: var(--dark);
-      font-weight: bold;
-      text-decoration: none;
-      padding: 0.25rem 0;
-      transition: color .2s, border-bottom .2s;
-    }
-    nav a:hover {
-      color: var(--primary);
-      border-bottom: 2px solid var(--primary);
-    }
-    section {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--primary);
-    }
-    section h3 {
-      color: var(--dark);
-      margin-top: 1.5rem;
-      margin-bottom: .5rem;
-    }
-    .card {
-      background: var(--muted);
-      padding: 2rem;
-      border-left: 6px solid var(--accent);
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
-    .profile-img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 4px solid var(--accent);
-    }
-    #week-list a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color .2s;
-    }
-    #week-list a:hover {
-      color: var(--primary);
-      text-decoration: underline;
-    }
-    ul { list-style: none; padding-left: 0; }
-    ul li::before {
-      content: "• ";
-      color: var(--primary);
-      margin-right: .25rem;
-    }
-    /* Responsive iframe container */
-    .responsive-iframe-container {
+    /* ... your existing CSS ... */
+
+    /* ✅ Add this responsive embed CSS */
+    .iframe-container {
       position: relative;
+      overflow: hidden;
       width: 100%;
-      padding-top: 75%; /* Use ~75% for 4:3 ratio; change to 56.25% for 16:9 */
+      /* Set aspect ratio here (e.g., 4:3 = 75%, 16:9 = 56.25%) */
+      padding-top: 75%;
       margin-bottom: 2rem;
     }
-    .responsive-iframe-container iframe {
+    .iframe-container iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -101,64 +22,24 @@
       height: 100%;
       border: none;
     }
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: .9rem;
-      color: var(--dark);
-    }
-    @media (min-width: 768px) {
-      header h1 { font-size: 3rem; }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Dr. Tahani Saleh</h1>
-    <p>Academic Researcher · Medical Doctor · Public Health Specialist</p>
-  </header>
+  <!-- ... your existing nav/header/main before Consultation section ... -->
 
-  <nav aria-label="Site sections">
-    <a href="#about-me">About Me</a>
-    <a href="#about-course">The Course</a>
-    <a href="#weekly">Submissions</a>
-    <a href="#consultation">Consultation</a>
-  </nav>
+  <section id="consultation" class="card">
+    <h2>GenAI Consultation Form</h2>
+    <div class="iframe-container">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf-a0AREahX2_ElN03Gf2pBuHM8_xkujs_6GvWt78XI1B66Cw/viewform?embedded=true"
+        frameborder="0" marginheight="0" marginwidth="0"
+      >Loading…</iframe>
+    </div>
+    <p style="text-align:center;font-style:italic;">
+      Please complete this form to request a Generative AI consultation.
+    </p>
+  </section>
 
-  <main>
-    <section id="about-me" class="card" style="text-align:center;">
-      <img src="https://raw.githubusercontent.com/TahSal/graph_portfolio/main/WhatsApp%20Image%202025-05-14%20at%2011.17.21%20AM.jpeg" alt="Dr. Tahani Saleh" class="profile-img">
-      <!-- ...existing content... -->
-    </section>
-
-    <section id="about-course" class="card">
-      <!-- ...existing content... -->
-    </section>
-
-    <section id="weekly" class="card">
-      <!-- ...existing content... -->
-    </section>
-
-    <!-- ✔️ New Consultation Form Section -->
-    <section id="consultation" class="card">
-      <h2>GenAI Consultation Form</h2>
-      <div class="responsive-iframe-container">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSf-a0AREahX2_ElN03Gf2pBuHM8_xkujs_6GvWt78XI1B66Cw/viewform?embedded=true"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >Loading…</iframe>
-      </div>
-      <p style="text-align:center; font-style: italic;">Please complete this form to request a Generative AI consultation.</p>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Dr. Tahani Saleh · Portfolio generated for the Generative AI for Work & Research course.
-  </footer>
-
-  <script src="https://cdn.botpress.cloud/webchat/v2.5/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/06/04/09/20250604092623-C7VHJ6NL.js"></script>
+  <!-- ... the rest of your main and footer ... -->
 </body>
 </html>
