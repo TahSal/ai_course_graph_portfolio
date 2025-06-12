@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ... your existing <head> content ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Tahani Saleh | Generative AI Portfolio</title>
   <style>
-    /* ... your existing CSS ... */
+    /* (your existing CSS) */
 
-    /* ✅ Add this responsive embed CSS */
+    /* ✅ Correct responsive embed CSS */
     .iframe-container {
       position: relative;
-      overflow: hidden;
       width: 100%;
-      /* Set aspect ratio here (e.g., 4:3 = 75%, 16:9 = 56.25%) */
-      padding-top: 75%;
+      overflow: hidden;
+      padding-top: 75%; /* 4:3 aspect ratio; use 56.25% for 16:9 */
       margin-bottom: 2rem;
     }
     .iframe-container iframe {
@@ -20,26 +21,34 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border: none;
+      border: 0;
     }
   </style>
 </head>
 <body>
-  <!-- ... your existing nav/header/main before Consultation section ... -->
+  <header><!-- existing header --></header>
+  <nav><!-- existing nav --></nav>
+  <main>
+    <section id="about-me" class="card"><!--…--></section>
+    <section id="about-course" class="card"><!--…--></section>
+    <section id="weekly" class="card"><!--…--></section>
 
-  <section id="consultation" class="card">
-    <h2>GenAI Consultation Form</h2>
-    <div class="iframe-container">
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSf-a0AREahX2_ElN03Gf2pBuHM8_xkujs_6GvWt78XI1B66Cw/viewform?embedded=true"
-        frameborder="0" marginheight="0" marginwidth="0"
-      >Loading…</iframe>
-    </div>
-    <p style="text-align:center;font-style:italic;">
-      Please complete this form to request a Generative AI consultation.
-    </p>
-  </section>
-
-  <!-- ... the rest of your main and footer ... -->
+    <!-- New Consultation section -->
+    <section id="consultation" class="card">
+      <h2>GenAI Consultation Form</h2>
+      <div class="iframe-container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSf-a0AREahX2_ElN03Gf2pBuHM8_xkujs_6GvWt78XI1B66Cw/viewform?embedded=true"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >Loading…</iframe>
+      </div>
+      <p style="text-align: center; font-style: italic;">
+        Please complete this form to request a Generative AI consultation.
+      </p>
+    </section>
+  </main>
+  <footer><!-- existing footer --></footer>
 </body>
 </html>
